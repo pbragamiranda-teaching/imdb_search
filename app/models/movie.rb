@@ -1,8 +1,8 @@
 class Movie < ApplicationRecord
   belongs_to :director
 
-  include PgSearch::Model
-  multisearchable against: [:title, :synopsis]
+  # include PgSearch::Model
+  # multisearchable against: [:title, :synopsis]
 
   include PgSearch::Model
   pg_search_scope :search_by_title_and_synopsis,
